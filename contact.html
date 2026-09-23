@@ -52,12 +52,12 @@
         = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 
         <header>
-            <h1>Website Template</h1>
+            <h1>Samantha's Travels</h1>
             <nav class="topnav" id="myTopnav">
                 <a href="index.html">Home</a>
-                <a href="grid-template.html">Grid templates</a>
-                <a href="single-item.html">Single item</a>
                 <a href="about.html">About</a>
+                <a href="single-item.html">Places</a>
+                <a href="grid-template.html">Gallery</a>
                 <a href="contact.html">Contact</a>
             </nav>
             <button type="button" class="icon" id="menuToggle" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false" aria-controls="myTopnav">
@@ -73,14 +73,11 @@
 
         <article class="introduction">
             <h2>
-                My Website - Contact
+                Contact
             </h2>
-            <p>
-                Please send your message below.
-            </p>
-            <a href="#" class="readmore-button">
-                Continue reading &hellip;
-            </a>
+            <p class="contact-form__description">
+                Please contact me below if you have any comments, questions or suggestions. I'd love to hear from you!</p>
+            
         </article>
 
         <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -92,7 +89,8 @@
         <form name="contact" method="POST" data-netlify="true" class="contact-form" action="/contact-success.html">
             <input type="hidden" name="form-name" value="contact">
 
-            <h3 class="contact-form__heading">Contact me</h3>
+            <h3 class="contact-form__heading">Get in touch!</h3>
+            
             <p class="contact-form__name">
                 <label>Your Name: </label><br><input type="text" name="name" placeholder="Name" required autofocus />
             </p>
@@ -110,19 +108,9 @@
                 <label>Message: </label><br><textarea name="message" rows="7" cols="60"
                     placeholder="Type your message. . ."></textarea>
             </p>
-            <p class="contact-form__browser">
-                <label>What browser are you using?</label><br>
-                <input list="browsers" placeholder="Click here to choose from list...">
-                <datalist id="browsers">
-                    <option value="Internet Explorer">
-                    <option value="Firefox">
-                    <option value="Chrome">
-                    <option value="Opera">
-                    <option value="Safari">
-                </datalist>
-            </p>
+           
             <p class="contact-form__submit">
-                <button type="submit">Send</button>
+                <button type="submit">Submit</button>
             </p>
         </form>
 
@@ -134,8 +122,8 @@
 
         <footer>
             <p>
-                Copyright Your Name &copy; 2024. Copyright material on this website is protected by copyright owned by
-                Your Name Here. Unless indicated otherwise for specific items or collections of content (either below or
+                 Copyright Samantha McMecking &copy; 2026. Copyright material on this website is protected by copyright owned by
+                Samantha McMecking. Unless indicated otherwise for specific items or collections of content (either below or
                 within specific items or collections), this copyright material is licensed for re-use under the Creative
                 Commons Attribution / Share-Alike (CC BY-SA 4.0) International licence. In essence, you are free to
                 copy, distribute and adapt the material, as long as you attribute it to me and abide by the other
@@ -146,61 +134,14 @@
             </p>
             <div class="footer-grid">
 
-                <article class="footer__menu">
-                    <h2 class="footer__menu__heading">
-                        Portfolio
-                    </h2>
-                    <ul class="footer__menu__list">
-                        <li><a href="#">Photography</a></li>
-                        <li><a href="#">Drawing</a></li>
-                        <li><a href="#">Animation</a></li>
-                        <li><a href="#">Graphic Design</a></li>
-                    </ul>
-                </article>
-
-                <article class="footer__menu">
-                    <h2 class="footer__menu__heading">
-                        About me
-                    </h2>
-                    <ul class="footer__menu__list">
-                        <li><a href="#">History &amp; CV</a></li>
-                        <li><a href="#">Hobbies &amp; Interests</a></li>
-                        <li><a href="#">More interesting stuff</a></li>
-                    </ul>
-                </article>
-
-                <article class="footer__menu">
-                    <h2 class="footer__menu__heading">
-                        Education
-                    </h2>
-                    <ul class="footer__menu__list">
-                        <li><a href="#">My Education Journey</a></li>
-                        <li><a href="#">Where I am Heading</a></li>
-                        <li><a href="https://www.op.ac.nz">Otago Polytechnic</a></li>
-                        <li><a href="https://www.op.ac.nz/schools/school-of-design/">School of Design</a></li>
-                    </ul>
-                </article>
-
-                <article class="footer__menu">
-                    <h2 class="footer__menu__heading">
-                        Social links
-                    </h2>
-                    <ul class="footer__menu__list">
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">MySpace</a></li>
-                        <li><a href="#">TikTok</a></li>
-                        <li><a href="#">Facebook</a></li>
-                    </ul>
-                </article>
+               
 
             </div>
 
             <div class="footer__copyright-details">
-                <p>All images are in the public domain.<br>Copyright Your Name Here &copy; 2024.</p>
+                <p>All images are in the public domain.<br>Copyright Samantha McMecking &copy; 2026.</p>
                 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span
-                        property="dct:title">This website</span> by <span property="cc:attributionName">Your Name
-                        Here</span></p>
+                        property="dct:title">This website</span> by <span property="cc:attributionName">Samantha McMecking</span></p>
             </div>
         </footer>
 
