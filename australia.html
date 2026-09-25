@@ -31,7 +31,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 
     <!-- Google Fonts - hamburger menu icon -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" /> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" />  
 
     <!-- Flickity Carousel CSS -->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
@@ -39,7 +39,7 @@
     <!-- my css -->
     <link rel="stylesheet" href="stylesheet.css">
 
-    <title>Website Template - Contact me</title>
+    <title>Website Template - Single Item</title>
 </head>
 
 <body>
@@ -57,9 +57,9 @@
                </a>"
             <h1>Samantha's Travels</h1>
             <nav class="topnav" id="myTopnav">
-                <a href="index.html">Home</a>
+               <a href="index.html">Home</a>
                 <a href="about.html">About</a>
-                <a href="single-item.html">Places</a>
+                <a href="places.html">Places</a>
                 <a href="grid-template.html">Gallery</a>
                 <a href="contact.html">Contact</a>
             </nav>
@@ -70,53 +70,39 @@
 
         <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-          INTRODUCTION OR BANNER AREA
-    
+        ARTICLE
+
         = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 
-        <article class="introduction">
-            <h2>
-                Contact
-            </h2>
-            <p class="contact-form__description">
-                Please contact me below if you have any comments, questions or suggestions. I'd love to hear from you!</p>
+        <div> 
+            <head>
+
+            <h1>Australia</h1>
             
-        </article>
-
-        <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-
-          CONTACT FORM
-    
-        = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
-
-        <form name="contact" method="POST" data-netlify="true" class="contact-form" action="/contact-success.html">
-            <input type="hidden" name="form-name" value="contact">
-
-            <h3 class="contact-form__heading">Get in touch!</h3>
-            
-            <p class="contact-form__name">
-                <label>Your Name: </label><br><input type="text" name="name" placeholder="Name" required autofocus />
-            </p>
-            <p class="contact-form__email">
-                <label>Your Email: </label><br><input type="email" name="email" placeholder="Email" required />
-            </p>
-            <p class="contact-form__preference">
-                <label>What do you think of this website: </label><br><select name="prefernce[]"
-                    placeholder="Select from list">
-                    <option value="like">I like it!</option>
-                    <option value="dislike">Hmmm... could do with some work</option>
-                </select>
-            </p>
-            <p class="contact-form__message">
-                <label>Message: </label><br><textarea name="message" rows="7" cols="60"
-                    placeholder="Type your message. . ."></textarea>
-            </p>
-           
-            <p class="contact-form__submit">
-                <button type="submit">Submit</button>
-            </p>
-        </form>
-
+            </head>
+        </div>
+        <div class="location-hero-img">
+            <img src="images/aus-cover.jpeg">
+        </div>
+       
+        <div class="location-two-column">
+            <div  class="column-1">
+                <h3 class="single-item__h3">Overview</h3>
+                <p class="location__introduction">Australia is a country in Oceania and comprises of the mainland of the Australian continent, the island of Tasmania and numerous smaller islands. It has a land area of 7,688,287 km², making it the sixth largest country in the world and is the flatted and driest inhabited continent. Australia’s climate varies, the north has a tropical climate, the centre is mostly desert, and the south has temperate coastal zones with cool winters. Australia is home to a rich variety of unique animals that are only found there. These include marsupials like the iconic kangaroos and Koalas, reptiles like venomous snakes and saltwater crocodiles and interesting birds such as cockatoo, kookaburra and emu.</p>
+            </div>
+            <div  class="column-2">
+                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
+                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
+                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
+                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
+            </div>
+        </div>
+        <div  class="column-1">
+            <h3 class="single-item__h3">Personal Thoughts</h3>
+            <p class="location__introduction">Australia has to be one of my favourite places as it is very similar to New Zealand but there is way more to do, especially shopping… Australia also has heaps to offer and depending on what you want to get out of your holiday depends on where in the country you go. I personally love the beach, shopping and sight seeing. I’ve found that the Sunshine Coast in QLD (Queensland) is perfect for what I like. QLD has lots to offer and majority of cities and towns lay along gorgeous beaches. I have stayed two times in Maloolaba which is north of Brisbane and is close to tourist hotspots like Australia Zoo and Noosa. My highlight from my last trip was getting to watch the Irwins do the croc shows at Australia Zoo! even got to say hi to Robert Irwin himself which was such a cool experience. Even when the Irwin’s are not there it is still a must go place as it is huge and the enclosures are incredible, you hardly feel like your in a zoo most of the time. I also really love going to Noosa, however it is very popular so if you want a spot on the beach make sure you go early!</p>
+        </div>
+       
+         
         <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
             FOOTER
@@ -154,7 +140,9 @@
             J A V A S C R I P T   B E L O W !
          *************************************** -->
 
-   <!-- JavaScript for the MOBILE NAV MENU -->
+    <script src="js/masonry-grid-script.js"></script>
+
+    <!-- JavaScript for the MOBILE NAV MENU -->
     <script>
         function toggleMenu() {
             const nav = document.getElementById("myTopnav");
@@ -166,7 +154,6 @@
             btn.setAttribute("aria-expanded", isOpen);
         }
     </script>
-
 </body>
 
 </html>

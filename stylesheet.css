@@ -39,7 +39,7 @@
     --portrait-background: #e06c10;
     --landscape-background: #F23A29;
     --dark-border-colour: #08331c;
-    --button-colour: #402320;
+    --button-colour: #26476a;
     --dark-green: #13632e;
     --slide-out-menu-background: rgba(233, 240, 234, 0.93);
     --footer-background: #c4d6ea;
@@ -114,18 +114,32 @@ main {
 
 header {
     position: relative; /* <-- needed so .icon anchors to the header, not the page */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     background-color: var(--header-background);
-    padding: 2rem 0 2rem 2rem;
-    min-height: 7rem;
+    padding: 0 0 0 2rem;
+    min-height: 5rem;
 }
 
 header h1 {
     color: #ebbcb6;
     font-weight: 600;
+    text-align: left;
 }
 
+.header_brand {
+    display: flex;
+    align-items: center;
+}
+
+.header_brand img {
+    margin-right: 2rem;
+    width: 60px;
+}
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
   
     004.  NAVIGATION MENU
@@ -142,7 +156,7 @@ header {
     justify-content: right;
     padding-right: 3rem;
     gap: 0.5rem 2rem;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .topnav a {
@@ -170,7 +184,7 @@ header {
     outline: none;
     cursor: pointer;
     padding: 0;
-    color: #000;
+    color: #c4d6ea;;
     font-size: 2rem;
 }
 
@@ -199,7 +213,7 @@ header {
         width: 40vw;
         margin-top: 0;
         padding: 6rem 2rem 4rem 2rem;
-        background-color: beige;
+        background-color: #26476a;
     }
 
     .topnav.responsive a {
@@ -269,6 +283,39 @@ header {
 .readmore-button:active {
     box-shadow: inset 0 2px 15px rgba(0, 0, 0, .3);
 }
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+  
+    006.  LOCATIONS
+  
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+.location-two-column {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 500px 1fr;
+    padding: 2rem;
+}
+
+.column-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.location__introduction {
+    grid-area: single-item__introduction;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+}
+
+@media only screen and (max-width: 965px) {
+    .location-two-column {
+        display: block;
+    }
+}
+
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
   

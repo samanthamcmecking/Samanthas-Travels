@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 328.28 206.06">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #29b458;
+      }
+
+      .cls-2 {
+        fill: #ca3627;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <rect class="cls-1" width="328.28" height="206.06"/>
+    <a href="google.com/maps"><circle class="cls-2" cx="61.11" cy="101.52" r="26.77"/></a>
+  </g>
+</svg>

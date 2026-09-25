@@ -31,7 +31,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 
     <!-- Google Fonts - hamburger menu icon -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" /> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" />  
 
     <!-- Flickity Carousel CSS -->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
@@ -39,7 +39,7 @@
     <!-- my css -->
     <link rel="stylesheet" href="stylesheet.css">
 
-    <title>Website Template - Contact me</title>
+    <title>Website Template - Single Item</title>
 </head>
 
 <body>
@@ -57,9 +57,9 @@
                </a>"
             <h1>Samantha's Travels</h1>
             <nav class="topnav" id="myTopnav">
-                <a href="index.html">Home</a>
+               <a href="index.html">Home</a>
                 <a href="about.html">About</a>
-                <a href="single-item.html">Places</a>
+                <a href="places.html">Places</a>
                 <a href="grid-template.html">Gallery</a>
                 <a href="contact.html">Contact</a>
             </nav>
@@ -70,53 +70,40 @@
 
         <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-          INTRODUCTION OR BANNER AREA
-    
+        ARTICLE
+
         = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+        
+        <div> 
+            <head>
 
-        <article class="introduction">
-            <h2>
-                Contact
-            </h2>
-            <p class="contact-form__description">
-                Please contact me below if you have any comments, questions or suggestions. I'd love to hear from you!</p>
+            <h1>Fiji</h1>
             
-        </article>
+            </head>
+        </div>
 
-        <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-
-          CONTACT FORM
-    
-        = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
-
-        <form name="contact" method="POST" data-netlify="true" class="contact-form" action="/contact-success.html">
-            <input type="hidden" name="form-name" value="contact">
-
-            <h3 class="contact-form__heading">Get in touch!</h3>
-            
-            <p class="contact-form__name">
-                <label>Your Name: </label><br><input type="text" name="name" placeholder="Name" required autofocus />
-            </p>
-            <p class="contact-form__email">
-                <label>Your Email: </label><br><input type="email" name="email" placeholder="Email" required />
-            </p>
-            <p class="contact-form__preference">
-                <label>What do you think of this website: </label><br><select name="prefernce[]"
-                    placeholder="Select from list">
-                    <option value="like">I like it!</option>
-                    <option value="dislike">Hmmm... could do with some work</option>
-                </select>
-            </p>
-            <p class="contact-form__message">
-                <label>Message: </label><br><textarea name="message" rows="7" cols="60"
-                    placeholder="Type your message. . ."></textarea>
-            </p>
-           
-            <p class="contact-form__submit">
-                <button type="submit">Submit</button>
-            </p>
-        </form>
-
+        <div class="location-hero-img">
+            <img src="images/fiji-cover.jpeg">
+        </div>
+       
+        <div class="location-two-column">
+            <div  class="column-1">
+                <h3 class="single-item__h3">Overview</h3>
+                <p class="location__introduction">Fiji is a country in the South Pacific and is made up of more than 300 Islands. It is best known for its rugged tropical landscapes, coral reefs and beaches lined with palm trees. The main Island Viti Levu is home to the capital Suva which is a port city. There are three official languages; Fijian, English and Fijian Hindi as Fiji is home to a large Fijian Indian population. I have been lucky enough to visit Fiji multiple times growing up with my last trip being in 2023. A few of my favourite things to do here are swim in the ocean/snorkel, visit the Maui Jetty, shop at the Sigatoka Markets and Ecotrax (an e-bike tour along abandoned sugar cane railways).</p>
+            </div>
+            <div  class="column-2">
+                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
+                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
+                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
+                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
+            </div>
+        </div>
+        <div  class="column-1">
+            <h3 class="single-item__h3">Personal Thoughts</h3>
+            <p class="location__introduction">Fiji is a very special place for me as I have been there probably 6 times with my family and friends. I have created lots of memories here and lots of local friends too. My favourite spot would have to be the Maui Bay Jetty. This is right near a friends village that we have been to visit and we always go down to the jetty and jump off to swim and snorkel as there are heaps of cool fish to spot, the only downside is you sometimes spy sea snakes which I am terrified of! I also love to go on beach walks and go hunting for pretty shells as the beaches are full of them, you just have to watch out for all the hermit crabs that could be calling them home. If I were to recommend one must do activity while your in Fiji it would have to be Ecotrax. Ecotrax is located along Fiji’s coral coast and uses electric assisted railway bikes to ride along abandoned sugarcane tramlines. Along the tour you stop at a village and get to meet all the excited kids and near the end stop off and swim at a beach with crystal clear waters which is beautiful. The only downside to Fiji I would say is that it can sometimes be a bit unclean as it is very tourist dominated and often the environment is not treated how it should. It is also hard to find nice snorkeling spots as due to climate change and sun bleaching all the coral near the shore is all dead meaning there are less fish to spot unless you go far out.</p>
+        </div>
+       
+         
         <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
             FOOTER
@@ -154,7 +141,9 @@
             J A V A S C R I P T   B E L O W !
          *************************************** -->
 
-   <!-- JavaScript for the MOBILE NAV MENU -->
+    <script src="js/masonry-grid-script.js"></script>
+
+    <!-- JavaScript for the MOBILE NAV MENU -->
     <script>
         function toggleMenu() {
             const nav = document.getElementById("myTopnav");
@@ -166,7 +155,6 @@
             btn.setAttribute("aria-expanded", isOpen);
         }
     </script>
-
 </body>
 
 </html>

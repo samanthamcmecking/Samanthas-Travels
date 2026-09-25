@@ -31,7 +31,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 
     <!-- Google Fonts - hamburger menu icon -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" /> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" />  
 
     <!-- Flickity Carousel CSS -->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
@@ -39,7 +39,7 @@
     <!-- my css -->
     <link rel="stylesheet" href="stylesheet.css">
 
-    <title>Website Template - Contact me</title>
+    <title>Website Template - Single Item</title>
 </head>
 
 <body>
@@ -57,9 +57,9 @@
                </a>"
             <h1>Samantha's Travels</h1>
             <nav class="topnav" id="myTopnav">
-                <a href="index.html">Home</a>
+               <a href="index.html">Home</a>
                 <a href="about.html">About</a>
-                <a href="single-item.html">Places</a>
+                <a href="places.html">Places</a>
                 <a href="grid-template.html">Gallery</a>
                 <a href="contact.html">Contact</a>
             </nav>
@@ -70,53 +70,40 @@
 
         <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-          INTRODUCTION OR BANNER AREA
-    
+        ARTICLE
+
         = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 
-        <article class="introduction">
-            <h2>
-                Contact
-            </h2>
-            <p class="contact-form__description">
-                Please contact me below if you have any comments, questions or suggestions. I'd love to hear from you!</p>
+        <div> 
+            <head>
+
+            <h1>Cook Islands</h1>
             
-        </article>
+            </head>
+        </div>
 
-        <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-
-          CONTACT FORM
-    
-        = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
-
-        <form name="contact" method="POST" data-netlify="true" class="contact-form" action="/contact-success.html">
-            <input type="hidden" name="form-name" value="contact">
-
-            <h3 class="contact-form__heading">Get in touch!</h3>
-            
-            <p class="contact-form__name">
-                <label>Your Name: </label><br><input type="text" name="name" placeholder="Name" required autofocus />
-            </p>
-            <p class="contact-form__email">
-                <label>Your Email: </label><br><input type="email" name="email" placeholder="Email" required />
-            </p>
-            <p class="contact-form__preference">
-                <label>What do you think of this website: </label><br><select name="prefernce[]"
-                    placeholder="Select from list">
-                    <option value="like">I like it!</option>
-                    <option value="dislike">Hmmm... could do with some work</option>
-                </select>
-            </p>
-            <p class="contact-form__message">
-                <label>Message: </label><br><textarea name="message" rows="7" cols="60"
-                    placeholder="Type your message. . ."></textarea>
-            </p>
-           
-            <p class="contact-form__submit">
-                <button type="submit">Submit</button>
-            </p>
-        </form>
-
+        <div class="location-hero-img">
+            <img src="images/cook-islands-cover.jpg">
+        </div>
+       
+        <div class="location-two-column">
+            <div  class="column-1">
+                <h3 class="single-item__h3">Overview</h3>
+                <p class="location__introduction">The Cook Islands are a self-governing island country in free association with New Zealand, located in the South Pacific Ocean between American Samoa and French Polynesia. It comprises 15 major islands with one main populated Island called Rarotonga and a smaller more tourist destination island called Aitutaki. There are two languages English and Cook Islands Māori (very closely related to te reo Māori with only a few slight differences) Rarotonga only has one main road that circles around the whole island and is only about 32 kilometers long, taking about an hour to do a full lap. The country also use two types of currency, New Zealand Dollar (NZD), alongside local Cook Islands coins and notes. The country is best known for its incredible lagoons and many great snorkelling and scuba-diving spots.</p>
+            </div>
+            <div  class="column-2">
+                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
+                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
+                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
+                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
+            </div>
+        </div>
+        <div  class="column-1">
+            <h3 class="single-item__h3">Personal Thoughts</h3>
+            <p class="location__introduction">I travelled for the first time to Rarotonga this year (2026) and unfortunately we were not blessed with very nice weather, as it rained the majority of the time I was there which put a bit of a dampener on the trip (pun intended)… On the days it was nice and sunny we hired a car which was good and meant we could park up near some nice beaches and go snorkelling. On my first snorkel not even 3 minutes from me entering the water I spotted a turtle! this was so cool and I got to follow it for ages and watched as it munched on some sea grass. On the days we didn’t have a car we utilised Rarotonga’s unique bus system. They have two busses that operate every day, a clockwise bus and anticlockwise. The cool thing about this system is that you are guaranteed to catch a bus every hour on the hour as they just keep doing laps around the island which takes an hour. It is a great experience as you can hop on and off anywhere you like, the only downside is the busses are old and the roads aren’t the best… so be in for a bumpy ride! Rarotonga has lots of tours like turtle tours, guided snorkelling, boat tours, you can book but unfortunately you need to book months in advance as they are extremely popular so we missed out which was a shame as it would of meant more things we could of done when the weather wasn’t great.</p>
+        </div>
+       
+         
         <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
             FOOTER
@@ -154,7 +141,9 @@
             J A V A S C R I P T   B E L O W !
          *************************************** -->
 
-   <!-- JavaScript for the MOBILE NAV MENU -->
+    <script src="js/masonry-grid-script.js"></script>
+
+    <!-- JavaScript for the MOBILE NAV MENU -->
     <script>
         function toggleMenu() {
             const nav = document.getElementById("myTopnav");
@@ -166,7 +155,6 @@
             btn.setAttribute("aria-expanded", isOpen);
         }
     </script>
-
 </body>
 
 </html>

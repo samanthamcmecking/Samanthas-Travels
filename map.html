@@ -39,7 +39,7 @@
     <!-- my css -->
     <link rel="stylesheet" href="stylesheet.css">
 
-    <title>Website Template - Contact me</title>
+    <title>Samantha's Travels</title>
 </head>
 
 <body>
@@ -52,14 +52,11 @@
         = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 
         <header>
-            <a href="/">
-                <img src="images/logo.svg" height="40px" width="60px">
-               </a>"
             <h1>Samantha's Travels</h1>
             <nav class="topnav" id="myTopnav">
-                <a href="index.html">Home</a>
+               <a href="index.html">Home</a>
                 <a href="about.html">About</a>
-                <a href="single-item.html">Places</a>
+                <a href="places.html">Places</a>
                 <a href="grid-template.html">Gallery</a>
                 <a href="contact.html">Contact</a>
             </nav>
@@ -76,46 +73,35 @@
 
         <article class="introduction">
             <h2>
-                Contact
+                Map
             </h2>
-            <p class="contact-form__description">
-                Please contact me below if you have any comments, questions or suggestions. I'd love to hear from you!</p>
             
+            <style>
+                svg a:hover circle {
+                    fill:blue;
+                }
+            </style>
+
+            <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 328.28 206.06">
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: #29b458;
+                    }
+              
+                    .cls-2 {
+                      fill: #ca3627;
+                    }
+                  </style>
+                </defs>
+                <g id="Layer_1-2" data-name="Layer 1">
+                  <rect class="cls-1" width="328.28" height="206.06"/>
+                  <a href="places.html"><circle class="cls-2" cx="61.11" cy="101.52" r="26.77"/></a>
+                </g>
+              </svg>
+
         </article>
 
-        <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-
-          CONTACT FORM
-    
-        = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
-
-        <form name="contact" method="POST" data-netlify="true" class="contact-form" action="/contact-success.html">
-            <input type="hidden" name="form-name" value="contact">
-
-            <h3 class="contact-form__heading">Get in touch!</h3>
-            
-            <p class="contact-form__name">
-                <label>Your Name: </label><br><input type="text" name="name" placeholder="Name" required autofocus />
-            </p>
-            <p class="contact-form__email">
-                <label>Your Email: </label><br><input type="email" name="email" placeholder="Email" required />
-            </p>
-            <p class="contact-form__preference">
-                <label>What do you think of this website: </label><br><select name="prefernce[]"
-                    placeholder="Select from list">
-                    <option value="like">I like it!</option>
-                    <option value="dislike">Hmmm... could do with some work</option>
-                </select>
-            </p>
-            <p class="contact-form__message">
-                <label>Message: </label><br><textarea name="message" rows="7" cols="60"
-                    placeholder="Type your message. . ."></textarea>
-            </p>
-           
-            <p class="contact-form__submit">
-                <button type="submit">Submit</button>
-            </p>
-        </form>
 
         <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 

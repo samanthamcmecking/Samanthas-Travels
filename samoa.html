@@ -31,7 +31,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 
     <!-- Google Fonts - hamburger menu icon -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" /> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" />  
 
     <!-- Flickity Carousel CSS -->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
@@ -39,7 +39,7 @@
     <!-- my css -->
     <link rel="stylesheet" href="stylesheet.css">
 
-    <title>Website Template - Contact me</title>
+    <title>Website Template - Single Item</title>
 </head>
 
 <body>
@@ -57,9 +57,9 @@
                </a>"
             <h1>Samantha's Travels</h1>
             <nav class="topnav" id="myTopnav">
-                <a href="index.html">Home</a>
+               <a href="index.html">Home</a>
                 <a href="about.html">About</a>
-                <a href="single-item.html">Places</a>
+                <a href="places.html">Places</a>
                 <a href="grid-template.html">Gallery</a>
                 <a href="contact.html">Contact</a>
             </nav>
@@ -70,53 +70,40 @@
 
         <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-          INTRODUCTION OR BANNER AREA
-    
+        ARTICLE
+
         = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 
-        <article class="introduction">
-            <h2>
-                Contact
-            </h2>
-            <p class="contact-form__description">
-                Please contact me below if you have any comments, questions or suggestions. I'd love to hear from you!</p>
+        <div> 
+            <head>
+
+            <h1>Samoa</h1>
             
-        </article>
+            </head>
+        </div>
 
-        <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-
-          CONTACT FORM
-    
-        = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
-
-        <form name="contact" method="POST" data-netlify="true" class="contact-form" action="/contact-success.html">
-            <input type="hidden" name="form-name" value="contact">
-
-            <h3 class="contact-form__heading">Get in touch!</h3>
-            
-            <p class="contact-form__name">
-                <label>Your Name: </label><br><input type="text" name="name" placeholder="Name" required autofocus />
-            </p>
-            <p class="contact-form__email">
-                <label>Your Email: </label><br><input type="email" name="email" placeholder="Email" required />
-            </p>
-            <p class="contact-form__preference">
-                <label>What do you think of this website: </label><br><select name="prefernce[]"
-                    placeholder="Select from list">
-                    <option value="like">I like it!</option>
-                    <option value="dislike">Hmmm... could do with some work</option>
-                </select>
-            </p>
-            <p class="contact-form__message">
-                <label>Message: </label><br><textarea name="message" rows="7" cols="60"
-                    placeholder="Type your message. . ."></textarea>
-            </p>
-           
-            <p class="contact-form__submit">
-                <button type="submit">Submit</button>
-            </p>
-        </form>
-
+        <div class="location-hero-img">
+            <img src="images/samoa-cover.jpeg">
+        </div>
+       
+        <div class="location-two-column">
+            <div  class="column-1">
+                <h3 class="single-item__h3">Overview</h3>
+                <p class="location__introduction">Samoa is an island country in Polynesia, which is in the South Pacific Ocean. It consists of two main islands Savai’i and Upolu. Upolu is the most populated island and where its capital and economic hub Apia is located. The main island accounts for 99 percent of Samoa’s population of 205,557 people. Samoa has a very tropical climate with high humidity, warm year round temperatures and a wet season running from November through to April. The country has breathtaking views with lots of scenic beaches laiden with palm trees and an abundance of gorgeous tropical plants.</p>
+            </div>
+            <div  class="column-2">
+                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
+                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
+                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
+                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
+            </div>
+        </div>
+        <div  class="column-1">
+            <h3 class="single-item__h3">Personal Thoughts</h3>
+            <p class="location__introduction">Samoa has to be the most scenic and beautiful country I have been to yet. It is so clean and untouched which I love as it makes for incredible photos. I really loved how Samoans took such pride in their houses, churches and landscapes as villages and front yards were beautifully manicured and decorated with brightly painted tires or repurposed ‘rubbish’ such as plastic bottles. One of my fondest memories from this place would have to be swimming with turtles for the first time! I am a huge lover of turtles as I find them so fascinating and seeing them up close and personal was defiantly one of the coolest experiences i’ve ever had. I managed to spot them in an area that has giant clams as they love to hang out in this spot. Another cool experience I had that I highly recommend is going to a rugby game. It was absolutely pouring down, the most torrential rain i’ve ever seen but that did not stop the locals from having the time of their lives, cheering and singing away! an amazing atmosphere</p>
+        </div>
+       
+         
         <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
             FOOTER
@@ -154,7 +141,9 @@
             J A V A S C R I P T   B E L O W !
          *************************************** -->
 
-   <!-- JavaScript for the MOBILE NAV MENU -->
+    <script src="js/masonry-grid-script.js"></script>
+
+    <!-- JavaScript for the MOBILE NAV MENU -->
     <script>
         function toggleMenu() {
             const nav = document.getElementById("myTopnav");
@@ -166,7 +155,6 @@
             btn.setAttribute("aria-expanded", isOpen);
         }
     </script>
-
 </body>
 
 </html>
