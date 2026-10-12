@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
     <!-- my css -->
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="stylesheet-3.css">
 
     <title>Website Template - Single Item</title>
 </head>
@@ -52,21 +52,39 @@
         = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 
         <header>
-            <a href="/">
-                <img src="images/logo.svg" height="40px" width="60px">
-               </a>"
+        <div class="header_brand">
+            <img src="images/logo.svg" height="40px" width="60px">
             <h1>Samantha's Travels</h1>
+        </div>
+
             <nav class="topnav" id="myTopnav">
-               <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="places.html">Places</a>
-                <a href="grid-template.html">Gallery</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            <button type="button" class="icon" id="menuToggle" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false" aria-controls="myTopnav">
-                <span class="material-symbols-outlined" id="menuIcon">menu</span>
-            </button>
-        </header>
+                <div class="nav-item"><a href="index-3.html">Home</a></div>
+                <div class="nav-item"><a href="about.html">About</a></div> 
+
+                <!-- Item WITH a dropdown: the link still goes to its page; the button opens the submenu -->
+                <div class="nav-item has-dropdown">
+                    <a>Places</a>
+                    <button type="button" class="submenu-toggle" aria-expanded="false"
+                            aria-controls="sub-grid" aria-label="Show Grid templates submenu">
+                        <span class="material-symbols-outlined chevron" aria-hidden="true">expand_more</span>
+                    </button>
+                    <ul class="dropdown" id="sub-grid">
+                        <li><a href="australia.html">Australia</a></li>
+                        <li><a href="fiji.html">Fiji</a></li>
+                        <li><a href="samoa.html">Samoa</a></li>
+                        <li><a href="cook-islands.html">Cook Islands</a></li>
+                    </ul>
+                </div>
+            
+                <div class="nav-item"><a href="gallery.html">Gallery</a></div>
+                <div class="nav-item"><a href="contact.html">Contact</a></div>
+        </nav>
+
+        <button type="button" class="icon" id="menuToggle" onclick="toggleMenu()"
+                aria-label="Toggle menu" aria-expanded="false" aria-controls="myTopnav">
+            <span class="material-symbols-outlined" id="menuIcon">menu</span>
+        </button>
+    </header>
 
         <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
@@ -92,10 +110,10 @@
                 <p class="location__introduction">The Cook Islands are a self-governing island country in free association with New Zealand, located in the South Pacific Ocean between American Samoa and French Polynesia. It comprises 15 major islands with one main populated Island called Rarotonga and a smaller more tourist destination island called Aitutaki. There are two languages English and Cook Islands Māori (very closely related to te reo Māori with only a few slight differences) Rarotonga only has one main road that circles around the whole island and is only about 32 kilometers long, taking about an hour to do a full lap. The country also use two types of currency, New Zealand Dollar (NZD), alongside local Cook Islands coins and notes. The country is best known for its incredible lagoons and many great snorkelling and scuba-diving spots.</p>
             </div>
             <div  class="column-2">
-                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
-                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
-                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
-                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
+                    <img src="images/raro-001.png" alt="Dune, by Frank Herbert">
+                    <img src="images/raro-006.png" alt="Dune, by Frank Herbert">
+                    <img src="images/raro-008.png" alt="Dune, by Frank Herbert">
+                    <img src="images/raro-004.png" alt="Dune, by Frank Herbert">
             </div>
         </div>
         <div  class="column-1">

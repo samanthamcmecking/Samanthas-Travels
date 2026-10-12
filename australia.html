@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
     <!-- my css -->
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="stylesheet-3.css">
 
     <title>Website Template - Single Item</title>
 </head>
@@ -52,21 +52,39 @@
         = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 
         <header>
-            <a href="/">
-                <img src="images/logo.svg" height="40px" width="60px">
-               </a>"
+        <div class="header_brand">
+            <img src="images/logo.svg" height="40px" width="60px">
             <h1>Samantha's Travels</h1>
+        </div>
+
             <nav class="topnav" id="myTopnav">
-               <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="places.html">Places</a>
-                <a href="grid-template.html">Gallery</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            <button type="button" class="icon" id="menuToggle" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false" aria-controls="myTopnav">
-                <span class="material-symbols-outlined" id="menuIcon">menu</span>
-            </button>
-        </header>
+                <div class="nav-item"><a href="index-3.html">Home</a></div>
+                <div class="nav-item"><a href="about.html">About</a></div> 
+
+                <!-- Item WITH a dropdown: the link still goes to its page; the button opens the submenu -->
+                <div class="nav-item has-dropdown">
+                    <a>Places</a>
+                    <button type="button" class="submenu-toggle" aria-expanded="false"
+                            aria-controls="sub-grid" aria-label="Show Grid templates submenu">
+                        <span class="material-symbols-outlined chevron" aria-hidden="true">expand_more</span>
+                    </button>
+                    <ul class="dropdown" id="sub-grid">
+                        <li><a href="australia.html">Australia</a></li>
+                        <li><a href="fiji.html">Fiji</a></li>
+                        <li><a href="samoa.html">Samoa</a></li>
+                        <li><a href="cook-islands.html">Cook Islands</a></li>
+                    </ul>
+                </div>
+            
+                <div class="nav-item"><a href="gallery.html">Gallery</a></div>
+                <div class="nav-item"><a href="contact.html">Contact</a></div>
+        </nav>
+
+        <button type="button" class="icon" id="menuToggle" onclick="toggleMenu()"
+                aria-label="Toggle menu" aria-expanded="false" aria-controls="myTopnav">
+            <span class="material-symbols-outlined" id="menuIcon">menu</span>
+        </button>
+    </header>
 
         <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
@@ -91,10 +109,10 @@
                 <p class="location__introduction">Australia is a country in Oceania and comprises of the mainland of the Australian continent, the island of Tasmania and numerous smaller islands. It has a land area of 7,688,287 km², making it the sixth largest country in the world and is the flatted and driest inhabited continent. Australia’s climate varies, the north has a tropical climate, the centre is mostly desert, and the south has temperate coastal zones with cool winters. Australia is home to a rich variety of unique animals that are only found there. These include marsupials like the iconic kangaroos and Koalas, reptiles like venomous snakes and saltwater crocodiles and interesting birds such as cockatoo, kookaburra and emu.</p>
             </div>
             <div  class="column-2">
-                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
-                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
-                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
-                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
+                    <img src="images/aus-007.png" alt="Dune, by Frank Herbert">
+                    <img src="images/gallery-008.png" alt="Dune, by Frank Herbert">
+                    <img src="images/aus-004.png" alt="Dune, by Frank Herbert">
+                    <img src="images/aus-009.png" alt="Dune, by Frank Herbert">
             </div>
         </div>
         <div  class="column-1">

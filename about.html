@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
     <!-- my css -->
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="stylesheet-3.css">
 
     <title>Samantha's Travels</title>
 </head>
@@ -52,21 +52,39 @@
         = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 
         <header>
-            <a href="/">
-                <img src="images/logo.svg" height="40px" width="60px">
-               </a>"
+        <div class="header_brand">
+            <img src="images/logo.svg" height="40px" width="60px">
             <h1>Samantha's Travels</h1>
+        </div>
+
             <nav class="topnav" id="myTopnav">
-               <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="places.html">Places</a>
-                <a href="grid-template.html">Gallery</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            <button type="button" class="icon" id="menuToggle" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false" aria-controls="myTopnav">
-                <span class="material-symbols-outlined" id="menuIcon">menu</span>
-            </button>
-        </header>
+                <div class="nav-item"><a href="index-3.html">Home</a></div>
+                <div class="nav-item"><a href="about.html">About</a></div> 
+
+                <!-- Item WITH a dropdown: the link still goes to its page; the button opens the submenu -->
+                <div class="nav-item has-dropdown">
+                    <a>Places</a>
+                    <button type="button" class="submenu-toggle" aria-expanded="false"
+                            aria-controls="sub-grid" aria-label="Show Grid templates submenu">
+                        <span class="material-symbols-outlined chevron" aria-hidden="true">expand_more</span>
+                    </button>
+                    <ul class="dropdown" id="sub-grid">
+                        <li><a href="australia.html">Australia</a></li>
+                        <li><a href="fiji.html">Fiji</a></li>
+                        <li><a href="samoa.html">Samoa</a></li>
+                        <li><a href="cook-islands.html">Cook Islands</a></li>
+                    </ul>
+                </div>
+            
+                <div class="nav-item"><a href="gallery.html">Gallery</a></div>
+                <div class="nav-item"><a href="contact.html">Contact</a></div>
+        </nav>
+
+        <button type="button" class="icon" id="menuToggle" onclick="toggleMenu()"
+                aria-label="Toggle menu" aria-expanded="false" aria-controls="myTopnav">
+            <span class="material-symbols-outlined" id="menuIcon">menu</span>
+        </button>
+    </header>
 
         <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
@@ -122,21 +140,88 @@
 
     </main>
 
-    <!-- ***************************************
+   <!-- ***************************************
             J A V A S C R I P T   B E L O W !
          *************************************** -->
 
+    <!-- Loading JQuery to help with Flickity Image Captions -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Flickity JavaScript -->
+    <script src="js/flickity.pkgd.js"></script>
+
+    <!-- CAROUSEL: Flickity JavaScript Setup utilising Jquery -->
+    <script>
+        var $carousel = $('.main-carousel').flickity({
+            cellSelector: 'img',
+            imagesLoaded: true,
+            draggable: true,
+            pageDots: false,
+            wrapAround: true,
+            percentPosition: false,
+            cellAlign: 'left',
+            contain: true
+        });
+        var $caption = $('.caption');
+        // Flickity instance of each image caption
+        var flkty = $carousel.data('flickity');
+
+        $carousel.on('select.flickity', function () {
+            // set image caption using img's alt text
+            $caption.text(flkty.selectedElement.alt)
+        });
+    </script>
+
    <!-- JavaScript for the MOBILE NAV MENU -->
     <script>
-        function toggleMenu() {
-            const nav = document.getElementById("myTopnav");
-            const icon = document.getElementById("menuIcon");
-            const btn = document.getElementById("menuToggle");
+        const nav  = document.getElementById("myTopnav");
+        const icon = document.getElementById("menuIcon");
+        const btn  = document.getElementById("menuToggle");
 
+        /* Mobile hamburger */
+        function toggleMenu() {
             const isOpen = nav.classList.toggle("responsive");
             icon.textContent = isOpen ? "close" : "menu";
             btn.setAttribute("aria-expanded", isOpen);
+            if (!isOpen) closeAllSubmenus();
         }
+
+        /* Dropdown helpers */
+        function closeAllSubmenus(except) {
+            document.querySelectorAll(".nav-item.open").forEach(item => {
+                if (item === except) return;
+                item.classList.remove("open");
+                item.querySelector(".submenu-toggle").setAttribute("aria-expanded", "false");
+            });
+        }
+
+        /* Chevron buttons open/close their own submenu */
+        document.querySelectorAll(".submenu-toggle").forEach(toggle => {
+            toggle.addEventListener("click", () => {
+                const item = toggle.closest(".nav-item");
+                const isOpen = item.classList.toggle("open");
+                toggle.setAttribute("aria-expanded", isOpen);
+                closeAllSubmenus(item);          /* one open at a time */
+            });
+        });
+
+        /* Escape closes submenus and returns focus to the chevron */
+        document.addEventListener("keydown", e => {
+            if (e.key !== "Escape") return;
+            const open = document.querySelector(".nav-item.open");
+            if (open) {
+                const toggle = open.querySelector(".submenu-toggle");
+                closeAllSubmenus();
+                toggle.focus();
+            }
+        });
+
+        /* Clicking elsewhere closes submenus */
+        document.addEventListener("click", e => {
+            if (!e.target.closest(".nav-item.has-dropdown")) closeAllSubmenus();
+        });
     </script>
 
 </body>

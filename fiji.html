@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
     <!-- my css -->
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="stylesheet-3.css">
 
     <title>Website Template - Single Item</title>
 </head>
@@ -52,21 +52,39 @@
         = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 
         <header>
-            <a href="/">
-                <img src="images/logo.svg" height="40px" width="60px">
-               </a>"
+        <div class="header_brand">
+            <img src="images/logo.svg" height="40px" width="60px">
             <h1>Samantha's Travels</h1>
+        </div>
+
             <nav class="topnav" id="myTopnav">
-               <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="places.html">Places</a>
-                <a href="grid-template.html">Gallery</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            <button type="button" class="icon" id="menuToggle" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false" aria-controls="myTopnav">
-                <span class="material-symbols-outlined" id="menuIcon">menu</span>
-            </button>
-        </header>
+                <div class="nav-item"><a href="index-3.html">Home</a></div>
+                <div class="nav-item"><a href="about.html">About</a></div> 
+
+                <!-- Item WITH a dropdown: the link still goes to its page; the button opens the submenu -->
+                <div class="nav-item has-dropdown">
+                    <a>Places</a>
+                    <button type="button" class="submenu-toggle" aria-expanded="false"
+                            aria-controls="sub-grid" aria-label="Show Grid templates submenu">
+                        <span class="material-symbols-outlined chevron" aria-hidden="true">expand_more</span>
+                    </button>
+                    <ul class="dropdown" id="sub-grid">
+                        <li><a href="australia.html">Australia</a></li>
+                        <li><a href="fiji.html">Fiji</a></li>
+                        <li><a href="samoa.html">Samoa</a></li>
+                        <li><a href="cook-islands.html">Cook Islands</a></li>
+                    </ul>
+                </div>
+            
+                <div class="nav-item"><a href="gallery.html">Gallery</a></div>
+                <div class="nav-item"><a href="contact.html">Contact</a></div>
+        </nav>
+
+        <button type="button" class="icon" id="menuToggle" onclick="toggleMenu()"
+                aria-label="Toggle menu" aria-expanded="false" aria-controls="myTopnav">
+            <span class="material-symbols-outlined" id="menuIcon">menu</span>
+        </button>
+    </header>
 
         <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
@@ -92,10 +110,10 @@
                 <p class="location__introduction">Fiji is a country in the South Pacific and is made up of more than 300 Islands. It is best known for its rugged tropical landscapes, coral reefs and beaches lined with palm trees. The main Island Viti Levu is home to the capital Suva which is a port city. There are three official languages; Fijian, English and Fijian Hindi as Fiji is home to a large Fijian Indian population. I have been lucky enough to visit Fiji multiple times growing up with my last trip being in 2023. A few of my favourite things to do here are swim in the ocean/snorkel, visit the Maui Jetty, shop at the Sigatoka Markets and Ecotrax (an e-bike tour along abandoned sugar cane railways).</p>
             </div>
             <div  class="column-2">
-                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
-                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
-                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
-                    <img src="images/dune-cover-large.jpg" alt="Dune, by Frank Herbert">
+                    <img src="images/fiji-001.png" alt="Dune, by Frank Herbert">
+                    <img src="images/fiji-002.png" alt="Dune, by Frank Herbert">
+                    <img src="images/fiji-008.png" alt="Dune, by Frank Herbert">
+                    <img src="images/fiji-004.png" alt="Dune, by Frank Herbert">
             </div>
         </div>
         <div  class="column-1">
