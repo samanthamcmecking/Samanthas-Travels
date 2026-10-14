@@ -135,6 +135,10 @@ header h1 {
     width: 30rem;
 }
 
+header h4 {
+    font-weight: 100;
+}
+
 .header_brand {
     display: flex;
     align-items: center;
@@ -357,16 +361,42 @@ header h1 {
   
 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
-.location-two-column {
+/* .location-two-column {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 500px 1fr;
-    padding: 2rem;
+    padding-top: 2rem;
+} */
+
+.location-two-column {
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+        'column-one-a column-two'
+        'column-one-b column-two'
+        'single-item__image single-item__introduction'
+        'single-item__block-one single-item__block-two';
+    padding-block: 2rem;
+    width: min(95%, 70em);
+    margin-inline: auto;
+}
+
+.column-1-a {
+    padding-right: 2rem;
+    grid-area: column-one-a;
+}
+
+.column-1-b {
+    padding-right: 2rem;
+    grid-area: column-one-b;
 }
 
 .column-2 {
+    grid-area: column-two;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
 
@@ -383,7 +413,95 @@ header h1 {
     }
 }
 
+.masonry-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.masonry-item .masonry-caption {
+    display: none;
+    background-color: white;
+    /* opacity: 70%; */
+    padding: 1rem;
+}
+
+.masonry-item:hover {
+    opacity: 50%;
+}
+
+.masonry-item:hover > .masonry-caption  {
+    display: block;
+}
+
+.item-1 {
+    background: url("images/gallery-002.png") no-repeat;
+    height: 600px;
+}
+
+.item-2 {
+    background: url("images/gallery-007.png") no-repeat;
+    width: 600px;
+    height: 400px;
+}
+.item-3 {
+    background: url("images/gallery-010.png") no-repeat;
+    width: 600px;
+    height: 400px;
+}
+
+.item-4 {
+    background: url("images/gallery-001.png") no-repeat;
+    width: 600px;
+    height: 400px;
+}
+
+.item-5 {
+    background: url("images/gallery-006.png") no-repeat;
+    width: 600px;
+    height: 400px;
+}
+
+.item-6 {
+    background: url("images/gallery-009.png") no-repeat;
+    width: 600px;
+    height: 400px;
+}
+
+.item-7 {
+    background: url("images/raro-002.png") no-repeat;
+    width: 600px;
+    height: 400px;
+}
+
+.item-8 {
+    background: url("images/cook-islands-cover.jpg") no-repeat;
+    width: 600px;
+    height: 400px;
+}
+.item-9 {
+    background: url("images/gallery-014.png") no-repeat;
+    width: 400px;
+    height: 600px;
+}
+
+.item-10 {
+    background: url("images/gallery-004.png") no-repeat;
+    width: 400px;
+    height: 600px;
+}
+
+.item-11 {
+    background: url("images/gallery-008.png") no-repeat;
+    width: 400px;
+    height: 600px;
+}
+
+.item-11 {
+    background: url("images/gallery-005.png") no-repeat;
+    width: 600px;
+    height: 400px;
+}
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
   
     006.  FLICKITY CAROUSEL
@@ -405,103 +523,6 @@ header h1 {
 .carousel-cell {
     width: 100%;
 }
-
-/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-  
-    007.  PORTRAIT LAYOUT - for a grid of portrait format images
-  
-= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
-
-/* This sets the grid layout for the page. */
-@supports (display: grid) {
-    .portrait__grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-        gap: 2rem;
-        margin: 2rem;
-    }
-}
-
-/* This 'portrait' class is a container for the text and images */
-.portrait {
-    text-align: center;
-    background-color: var(--portrait-background);
-    border-radius: .4rem;
-    padding: 2rem 2rem 1.4rem 2rem;
-    transition: box-shadow .3s;
-    text-decoration: none;
-}
-
-.portrait:hover {
-    box-shadow: rgba(50, 50, 93, 0.5) 0px 13px 27px -5px, rgba(0, 0, 0, 0.5) 0px 8px 16px -8px;
-}
-
-.portrait__image {
-    width: 100%;
-}
-
-.portrait__name {
-    color: var(--cream-text);
-    font-weight: 400;
-    margin-top: .8rem;
-    margin-bottom: .4rem;
-}
-
-.portrait__description {
-    color: var(--cream-text);
-    font-weight: 400;
-    font-size: .7rem;
-    margin-bottom: 1rem;
-}
-
-/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-  
-    008.  LANDSCAPE LAYOUT - for a grid of landscape format images
-  
-= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
-
-/* This sets the grid layout for the page. */
-@supports (display: grid) {
-    .landscape__grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr));
-        gap: 1rem;
-        margin: 1rem;
-    }
-}
-
-/* This 'landscape' class is a container for the text and images */
-.landscape {
-    text-align: center;
-    background-color: var(--landscape-background);
-    border-radius: .4rem;
-    padding: 2rem 2rem 1.4rem 2rem;
-    transition: box-shadow .3s;
-    text-decoration: none;
-}
-
-.landscape:hover {
-    box-shadow: rgba(50, 50, 93, 0.5) 0px 13px 27px -5px, rgba(0, 0, 0, 0.5) 0px 8px 16px -8px;
-}
-
-.landscape__image {
-    width: 100%;
-}
-
-.landscape__name {
-    color: var(--cream-text);
-    font-weight: 400;
-    margin-top: .8rem;
-    margin-bottom: .4rem;
-}
-
-.landscape__description {
-    color: var(--cream-text);
-    font-weight: 400;
-    font-size: .7rem;
-    margin-bottom: 1rem;
-}
-
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
   
     009.  MASONRY LAYOUT - for a mix of landscape and portrait format images
@@ -521,12 +542,15 @@ header h1 {
 }
 
 .grid--masonry>* {
-    width: min(24rem, 100%);
+    /* width: min(24rem, 100%); */
 }
 
 .grid--masonry img {
     border-radius: 4px;
 }
+
+
+  
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
   
@@ -591,6 +615,7 @@ header h1 {
     font-weight: 300;
     font-size: 2rem;
     line-height: 2.8rem;
+    
 }
 
 .single-item__introduction {
